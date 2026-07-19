@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - POS Moderne</title>
+    <link rel="stylesheet" href="assets/css/modern-design.css">
+    <link rel="stylesheet" href="assets/css/layout-modern.css">
+    <link rel="stylesheet" href="assets/css/dashboard-modern.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="app-sidebar">
+            <div class="sidebar-header">
+                <div style="width: 32px; height: 32px; border-radius: 8px; background: #2563eb; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                    📦
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <span style="font-weight: 700; color: #1f2937; font-size: 14px;">SHOP</span>
+                    <span style="font-size: 11px; color: #6b7280;">POS Moderne</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🛒</span>
+                    <span>Caisse POS</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📦</span>
+                    <span>Produits</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📂</span>
+                    <span>Catégories</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📋</span>
+                    <span>Ventes</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Rapports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Paramètres</span>
+                </a>
+                <a href="#" class="nav-item nav-item-primary">
+                    <span class="nav-icon">🚪</span>
+                    <span>Déconnexion</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="app-main">
+            <!-- HEADER -->
+            <header class="app-header">
+                <div class="header-left">
+                    <div class="header-search">
+                        <span class="header-search-icon">🔍</span>
+                        <input type="text" placeholder="Rechercher produits, clients...">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-time">
+                        <span style="font-size: 12px; font-weight: 700; color: #1f2937;" id="time">14:35</span>
+                        <span style="font-size: 10px; color: #6b7280;" id="date">Aujourd'hui</span>
+                    </div>
+                    <div class="header-user">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #0ea5e9); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;">
+                            SM
+                        </div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 600; color: #1f2937;">Samir</div>
+                            <div style="font-size: 11px; color: #6b7280;">Admin</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENT -->
+            <div class="app-content">
+                <!-- PAGE HEADER -->
+                <div class="page-header">
+                    <h1 class="page-title">📊 Dashboard</h1>
+                    <p class="page-subtitle">Vue d'ensemble de votre activité</p>
+                </div>
+
+                <!-- STATISTICS CARDS -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-icon primary">💰</div>
+                        <div class="stat-label">Chiffre d'affaires</div>
+                        <div class="stat-value">12,540€</div>
+                        <div class="stat-change positive">12% vs hier</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon success">🛒</div>
+                        <div class="stat-label">Commandes</div>
+                        <div class="stat-value">142</div>
+                        <div class="stat-change positive">8% vs hier</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon warning">📦</div>
+                        <div class="stat-label">Produits Stock</div>
+                        <div class="stat-value">487</div>
+                        <div class="stat-change negative">3% vs hier</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon error">👥</div>
+                        <div class="stat-label">Clients</div>
+                        <div class="stat-value">328</div>
+                        <div class="stat-change positive">5% vs hier</div>
+                    </div>
+                </div>
+
+                <!-- MAIN CONTENT GRID -->
+                <div class="grid grid-cols-3">
+                    <!-- REVENUE CHART -->
+                    <div class="dashboard-section" style="grid-column: span 2;">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Ventes (7 derniers jours)</h2>
+                            <button class="table-filter-btn">📅 Semaine</button>
+                        </div>
+                        <div class="dashboard-section-body">
+                            <div class="chart-container">
+                                <div class="chart-placeholder">📈 Graphique de ventes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TOP PRODUCTS -->
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Top Produits</h2>
+                        </div>
+                        <div class="dashboard-section-body">
+                            <div class="quick-stats">
+                                <div class="quick-stat">
+                                    <div class="quick-stat-label">Tabac Premium</div>
+                                    <div class="quick-stat-value" style="color: #2563eb;">156</div>
+                                </div>
+                                <div class="quick-stat">
+                                    <div class="quick-stat-label">Cigares</div>
+                                    <div class="quick-stat-value" style="color: #10b981;">98</div>
+                                </div>
+                                <div class="quick-stat">
+                                    <div class="quick-stat-label">Accessoires</div>
+                                    <div class="quick-stat-value" style="color: #f59e0b;">76</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACTIVITY & ALERTS -->
+                <div class="grid grid-cols-2">
+                    <!-- RECENT ACTIVITY -->
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Activité Récente</h2>
+                        </div>
+                        <div class="dashboard-section-body">
+                            <table class="activity-table">
+                                <thead>
+                                    <tr>
+                                        <th>Produit</th>
+                                        <th>Montant</th>
+                                        <th>Heure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="activity-product-name">Nero Black</div>
+                                            <div class="activity-product-category">Cigares</div>
+                                        </td>
+                                        <td class="activity-amount">45€</td>
+                                        <td class="activity-time">14:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="activity-product-name">Tabac Léger</div>
+                                            <div class="activity-product-category">Tabac</div>
+                                        </td>
+                                        <td class="activity-amount">12€</td>
+                                        <td class="activity-time">14:10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="activity-product-name">Paquet Mix</div>
+                                            <div class="activity-product-category">Tabac</div>
+                                        </td>
+                                        <td class="activity-amount">28€</td>
+                                        <td class="activity-time">13:45</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- ALERTS -->
+                    <div class="dashboard-section">
+                        <div class="dashboard-section-header">
+                            <h2 class="dashboard-section-title">Alertes Stock</h2>
+                        </div>
+                        <div class="dashboard-section-body">
+                            <div class="alerts-grid">
+                                <div class="alert-item warning">
+                                    <div class="alert-icon">⚠️</div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">Stock Faible</div>
+                                        <div class="alert-message">Tabac Léger: 5 paquets</div>
+                                    </div>
+                                </div>
+                                <div class="alert-item error">
+                                    <div class="alert-icon">❌</div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">Rupture Stock</div>
+                                        <div class="alert-message">Cigares Spéciaux</div>
+                                    </div>
+                                </div>
+                                <div class="alert-item info">
+                                    <div class="alert-icon">ℹ️</div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">Promo Active</div>
+                                        <div class="alert-message">-10% Tabac Premium</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- UPDATE TIME -->
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('time').textContent = now.toLocaleTimeString('fr-FR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            
+            const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+            const date = days[now.getDay()] + ' ' + now.toLocaleDateString('fr-FR', { 
+                day: 'numeric', 
+                month: 'short' 
+            });
+            document.getElementById('date').textContent = date;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

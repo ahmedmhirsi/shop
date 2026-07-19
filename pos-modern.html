@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caisse POS - Interface Moderne</title>
+    <link rel="stylesheet" href="assets/css/modern-design.css">
+    <link rel="stylesheet" href="assets/css/layout-modern.css">
+    <link rel="stylesheet" href="assets/css/pos-modern.css">
+    <link rel="stylesheet" href="assets/css/modals-modern.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="app-sidebar">
+            <div class="sidebar-header">
+                <div style="width: 32px; height: 32px; border-radius: 8px; background: #2563eb; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                    🛒
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <span style="font-weight: 700; color: #1f2937; font-size: 14px;">CAISSE</span>
+                    <span style="font-size: 11px; color: #6b7280;">POS</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">🛒</span>
+                    <span>Caisse POS</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📦</span>
+                    <span>Produits</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📂</span>
+                    <span>Catégories</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📋</span>
+                    <span>Ventes</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Rapports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Paramètres</span>
+                </a>
+                <a href="#" class="nav-item nav-item-primary">
+                    <span class="nav-icon">🚪</span>
+                    <span>Déconnexion</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="app-main">
+            <!-- HEADER -->
+            <header class="app-header">
+                <div class="header-left">
+                    <div class="header-search">
+                        <span class="header-search-icon">🔍</span>
+                        <input type="text" placeholder="Chercher un produit...">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-time">
+                        <span style="font-size: 12px; font-weight: 700; color: #1f2937;" id="time">14:35</span>
+                        <span style="font-size: 10px; color: #6b7280;">Aujourd'hui</span>
+                    </div>
+                    <div class="header-user">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #0ea5e9); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;">
+                            SM
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- POS CONTENT -->
+            <div class="app-content">
+                <div class="pos-wrapper">
+                    <!-- PRODUCTS AREA -->
+                    <div class="pos-products-area">
+                        <!-- SEARCH BAR -->
+                        <div class="pos-search-bar">
+                            <div class="pos-search-input">
+                                <span class="pos-search-icon">🔍</span>
+                                <input type="text" id="productSearch" placeholder="Rechercher un produit...">
+                            </div>
+                            <button class="pos-scan-barcode">📱 Scanner Code</button>
+                        </div>
+
+                        <!-- CATEGORIES -->
+                        <div class="pos-categories">
+                            <button class="pos-category-btn active">Tous</button>
+                            <button class="pos-category-btn">Tabac</button>
+                            <button class="pos-category-btn">Cigares</button>
+                            <button class="pos-category-btn">Accessoires</button>
+                            <button class="pos-category-btn">Boissons</button>
+                        </div>
+
+                        <!-- PRODUCTS GRID -->
+                        <div class="pos-products-grid">
+                            <!-- PRODUCT CARD 1 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">🚬</div>
+                                <div class="pos-product-name">Tabac Léger</div>
+                                <div class="pos-product-price">12.50€</div>
+                                <div class="pos-product-stock">📦 24 paquets</div>
+                            </div>
+
+                            <!-- PRODUCT CARD 2 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">🚬</div>
+                                <div class="pos-product-name">Tabac Premium</div>
+                                <div class="pos-product-price">18.50€</div>
+                                <div class="pos-product-stock">📦 15 paquets</div>
+                            </div>
+
+                            <!-- PRODUCT CARD 3 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">🚭</div>
+                                <div class="pos-product-name">Cigares Noirs</div>
+                                <div class="pos-product-price">45.00€</div>
+                                <div class="pos-product-stock">📦 8 boîtes</div>
+                            </div>
+
+                            <!-- PRODUCT CARD 4 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">🚭</div>
+                                <div class="pos-product-name">Cigares Mix</div>
+                                <div class="pos-product-price">55.00€</div>
+                                <div class="pos-product-stock">📦 5 boîtes</div>
+                            </div>
+
+                            <!-- PRODUCT CARD 5 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">🔥</div>
+                                <div class="pos-product-name">Briquets</div>
+                                <div class="pos-product-price">3.50€</div>
+                                <div class="pos-product-stock">📦 50 pièces</div>
+                            </div>
+
+                            <!-- PRODUCT CARD 6 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">📦</div>
+                                <div class="pos-product-name">Cendriers</div>
+                                <div class="pos-product-price">8.00€</div>
+                                <div class="pos-product-stock low">📦 2 pièces</div>
+                            </div>
+
+                            <!-- PRODUCT CARD 7 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">🥤</div>
+                                <div class="pos-product-name">Café</div>
+                                <div class="pos-product-price">2.50€</div>
+                                <div class="pos-product-stock">📦 100 tasses</div>
+                            </div>
+
+                            <!-- PRODUCT CARD 8 -->
+                            <div class="pos-product-card">
+                                <div class="pos-product-image">🍫</div>
+                                <div class="pos-product-name">Chocolat Chaud</div>
+                                <div class="pos-product-price">3.00€</div>
+                                <div class="pos-product-stock">📦 80 tasses</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CART AREA -->
+                    <div class="pos-cart-area">
+                        <!-- CART HEADER -->
+                        <div class="pos-cart-header">
+                            <div class="pos-cart-title">🛒 Panier (2)</div>
+                        </div>
+
+                        <!-- CART ITEMS -->
+                        <div class="pos-cart-items">
+                            <!-- ITEM 1 -->
+                            <div class="pos-cart-item">
+                                <div class="pos-cart-item-image">🚬</div>
+                                <div class="pos-cart-item-info">
+                                    <div class="pos-cart-item-name">Tabac Léger</div>
+                                    <div class="pos-cart-item-details">12.50€ x 2</div>
+                                </div>
+                                <div class="pos-cart-item-quantity">
+                                    <button class="qty-btn">−</button>
+                                    <input type="text" class="qty-input" value="2" readonly>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                                <div class="pos-cart-item-total">25.00€</div>
+                                <button class="pos-cart-item-remove">✕</button>
+                            </div>
+
+                            <!-- ITEM 2 -->
+                            <div class="pos-cart-item">
+                                <div class="pos-cart-item-image">🚭</div>
+                                <div class="pos-cart-item-info">
+                                    <div class="pos-cart-item-name">Cigares Noirs</div>
+                                    <div class="pos-cart-item-details">45.00€ x 1</div>
+                                </div>
+                                <div class="pos-cart-item-quantity">
+                                    <button class="qty-btn">−</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                                <div class="pos-cart-item-total">45.00€</div>
+                                <button class="pos-cart-item-remove">✕</button>
+                            </div>
+                        </div>
+
+                        <!-- CART TOTALS -->
+                        <div class="pos-cart-totals">
+                            <div class="pos-total-line">
+                                <span>Sous-total :</span>
+                                <span>70.00€</span>
+                            </div>
+                            <div class="pos-total-line">
+                                <span>TVA (20%) :</span>
+                                <span>14.00€</span>
+                            </div>
+                            <div class="pos-total-line main">
+                                <span>Total :</span>
+                                <span class="pos-total-amount">84.00€</span>
+                            </div>
+                        </div>
+
+                        <!-- PAYMENT BUTTONS -->
+                        <div class="pos-payment-buttons">
+                            <button class="pos-checkout-btn">✓ Passer au paiement</button>
+                            <button class="pos-clear-cart-btn">Vider le panier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- PAYMENT MODAL -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2 class="modal-title">Paiement</h2>
+                <button class="modal-close-btn">✕</button>
+            </div>
+            <div class="modal-content">
+                <div class="payment-amount-display">
+                    <div class="payment-amount-label">Montant à payer</div>
+                    <div class="payment-amount-value">84<span class="payment-amount-currency">€</span></div>
+                </div>
+
+                <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 12px; color: #1f2937;">Mode de paiement</h3>
+                <div class="payment-methods">
+                    <div class="payment-method active">
+                        <div class="payment-method-icon">💳</div>
+                        <div class="payment-method-name">Carte</div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-method-icon">💵</div>
+                        <div class="payment-method-name">Espèces</div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-method-icon">📱</div>
+                        <div class="payment-method-name">Mobile</div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-method-icon">🧾</div>
+                        <div class="payment-method-name">Chèque</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closePaymentModal()">Annuler</button>
+                <button class="btn btn-primary" onclick="processPayment()">Confirmer paiement</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- UPDATE TIME -->
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('time').textContent = now.toLocaleTimeString('fr-FR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // Payment modal functions
+        function closePaymentModal() {
+            document.getElementById('paymentModal').classList.remove('active');
+        }
+
+        function processPayment() {
+            // Process payment logic
+            alert('Paiement traité!');
+            closePaymentModal();
+        }
+
+        // Add checkout button listener
+        document.querySelector('.pos-checkout-btn').addEventListener('click', function() {
+            document.getElementById('paymentModal').classList.add('active');
+        });
+
+        document.querySelector('.modal-close-btn').addEventListener('click', closePaymentModal);
+    </script>
+</body>
+</html>

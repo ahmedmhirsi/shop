@@ -1,0 +1,474 @@
+/**
+ * Modern Forms & Input Stylesheet
+ * Professional form elements and validation
+ */
+
+/* ============================================================================
+   FORM CONTAINERS
+   ============================================================================ */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-section-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1f2937;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-row.full {
+    grid-template-columns: 1fr;
+}
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ============================================================================
+   FORM LABELS & HINTS
+   ============================================================================ */
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-label.required::after {
+    content: ' *';
+    color: #ef4444;
+}
+
+.form-hint {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.form-error {
+    font-size: 12px;
+    color: #ef4444;
+    margin-top: 4px;
+}
+
+/* ============================================================================
+   TEXT INPUTS
+   ============================================================================ */
+.form-control {
+    padding: 11px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #ffffff;
+    color: #1f2937;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #f0f9ff;
+    background: #ffffff;
+}
+
+.form-control:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.form-control.is-invalid {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 3px #fef2f2;
+    border-color: #ef4444;
+}
+
+.form-control.is-valid {
+    border-color: #10b981;
+}
+
+.form-control.is-valid:focus {
+    box-shadow: 0 0 0 3px #ecfdf5;
+    border-color: #10b981;
+}
+
+/* ============================================================================
+   SELECT ELEMENTS
+   ============================================================================ */
+.form-select {
+    padding: 11px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #ffffff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") no-repeat right 10px center;
+    background-size: 16px;
+    padding-right: 36px;
+    color: #1f2937;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #f0f9ff;
+}
+
+.form-select:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.form-select option {
+    color: #1f2937;
+    background: #ffffff;
+}
+
+.form-select option:disabled {
+    color: #9ca3af;
+    background: #f3f4f6;
+}
+
+/* ============================================================================
+   TEXTAREA
+   ============================================================================ */
+.form-textarea {
+    padding: 11px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #ffffff;
+    color: #1f2937;
+    resize: vertical;
+    min-height: 120px;
+    transition: all 0.2s ease-in-out;
+    line-height: 1.5;
+}
+
+.form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #f0f9ff;
+}
+
+.form-textarea:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* ============================================================================
+   CHECKBOXES & RADIO BUTTONS
+   ============================================================================ */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #ffffff;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    flex-shrink: 0;
+}
+
+.form-check-input:hover {
+    border-color: #2563eb;
+}
+
+.form-check-input:checked {
+    background: #2563eb;
+    border-color: #2563eb;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.form-check-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #f0f9ff;
+}
+
+.form-check-input:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+/* Radio buttons */
+.form-radio-input {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #ffffff;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    flex-shrink: 0;
+}
+
+.form-radio-input:hover {
+    border-color: #2563eb;
+}
+
+.form-radio-input:checked {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 4px #2563eb;
+}
+
+.form-radio-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #f0f9ff;
+}
+
+/* ============================================================================
+   FILE INPUT
+   ============================================================================ */
+.form-file-input {
+    position: relative;
+}
+
+.form-file-label {
+    display: block;
+    padding: 11px 14px;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    text-align: center;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-file-label:hover {
+    border-color: #2563eb;
+    background: #f0f9ff;
+}
+
+.form-file-label.dragover {
+    border-color: #2563eb;
+    background: #f0f9ff;
+}
+
+.form-file-input input {
+    display: none;
+}
+
+.form-file-text {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.form-file-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+/* ============================================================================
+   VALIDATION STATES
+   ============================================================================ */
+.form-group.error .form-control,
+.form-group.error .form-select,
+.form-group.error .form-textarea {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.form-group.error .form-control:focus,
+.form-group.error .form-select:focus,
+.form-group.error .form-textarea:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px #fef2f2;
+}
+
+.form-group.success .form-control,
+.form-group.success .form-select,
+.form-group.success .form-textarea {
+    border-color: #10b981;
+}
+
+.form-group.success .form-control:focus,
+.form-group.success .form-select:focus,
+.form-group.success .form-textarea:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px #ecfdf5;
+}
+
+/* ============================================================================
+   FORM ACTIONS
+   ============================================================================ */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.form-actions.center {
+    justify-content: center;
+}
+
+.form-actions.between {
+    justify-content: space-between;
+}
+
+/* ============================================================================
+   INPUT GROUPS
+   ============================================================================ */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.input-group-icon {
+    padding: 11px 14px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.input-group .form-control {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+.input-group .form-control:focus {
+    border-color: #2563eb;
+}
+
+/* ============================================================================
+   FORM HELPERS
+   ============================================================================ */
+.form-text {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.form-text.muted {
+    color: #9ca3af;
+}
+
+.invalid-feedback {
+    display: none;
+    font-size: 12px;
+    color: #ef4444;
+    margin-top: 4px;
+}
+
+.form-group.error .invalid-feedback {
+    display: block;
+}
+
+.valid-feedback {
+    display: none;
+    font-size: 12px;
+    color: #10b981;
+    margin-top: 4px;
+}
+
+.form-group.success .valid-feedback {
+    display: block;
+}
+
+/* ============================================================================
+   RESPONSIVE FORMS
+   ============================================================================ */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .form-section {
+        gap: 12px;
+    }
+    
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+    
+    .form-control,
+    .form-select,
+    .form-textarea {
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-form {
+        gap: 16px;
+    }
+    
+    .form-label {
+        font-size: 12px;
+    }
+    
+    .form-control,
+    .form-select,
+    .form-textarea {
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+}

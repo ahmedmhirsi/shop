@@ -1,0 +1,278 @@
+/* Sidebar POS specific styling - dark left sidebar inspired by provided image */
+
+/* Ensure this only applies when body has page-pos */
+body.page-pos .sidebar {
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+    background: #0f1724; /* dark navy */
+    color: #e6eefb;
+    border-right: 1px solid rgba(255,255,255,0.03);
+    padding: 22px 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1050;
+    overflow-y: auto;
+    transition: width 200ms ease-in-out, transform 200ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Brand header */
+body.page-pos .sidebar-header {
+    padding-bottom: 18px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+body.page-pos .sidebar-header h2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0;
+}
+
+body.page-pos .sidebar .sidebar-logo-text { display:block; color:#fff; font-weight:800; }
+
+
+/* Adjust main content to account for fixed sidebar */
+body.page-pos .main-content {
+    margin-left: 260px !important;
+    transition: margin-left 200ms ease-in-out;
+}
+
+/* Brand header (unified) */
+body.page-pos .sidebar-header h2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 18px 0;
+}
+
+/* Nav items style harmonized with POS */
+body.page-pos .sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border-radius: 0;
+    color: #cbd5e1;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-decoration: none;
+    transition: background 160ms ease, color 160ms ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.page-pos .sidebar-menu a i {
+    font-size: 18px;
+    color: #94a3b8;
+    width: 28px;
+    text-align: center;
+}
+
+body.page-pos .sidebar-menu a.active,
+body.page-pos .sidebar-menu a:hover {
+    background: rgba(255,255,255,0.03);
+    color: #ffffff;
+    box-shadow: none;
+}
+
+body.page-pos .sidebar-menu a.active i,
+body.page-pos .sidebar-menu a:hover i {
+    color: #dbeafe;
+}
+
+/* Active item full-width style */
+body.page-pos .sidebar-menu { position: relative; padding-top: 10px; }
+body.page-pos .sidebar-menu a.active {
+    background: rgba(255,255,255,0.04);
+    color: #ffffff;
+}
+
+/* keep pseudo-element unused for compatibility */
+body.page-pos .sidebar-menu a.active::before { display: none; }
+
+/* Compact user info in footer (dark theme) */
+body.page-pos .sidebar-footer {
+    margin-top: auto;
+    padding: 18px 12px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+body.page-pos .sidebar-footer .user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    box-shadow: 0 8px 24px rgba(37,99,235,0.12);
+}
+
+body.page-pos .sidebar-footer .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+body.page-pos .sidebar-footer .user-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+body.page-pos .sidebar-footer .user-role {
+    font-size: 12px;
+    color: #93a3b5;
+}
+
+/* Logout button styled as red pill */
+body.page-pos .sidebar-footer .logout-btn {
+    margin-left: auto;
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+body.page-pos .sidebar-footer .logout-btn i { margin-right: 8px; }
+
+/* No menu items hidden — show full admin menu in POS sidebar as requested */
+
+
+/* Ensure essential items stay: pos, products, categories (if present) */
+
+/* Ensure payment bar is a floating grouped control above sidebar */
+body.page-pos .payment-bar-fixed {
+    position: fixed !important;
+    bottom: 18px !important;
+    right: 32px !important; /* gap from right edge */
+    z-index: 12050 !important; /* above sidebar */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+/* Container for the payment buttons - visual card */
+body.page-pos .payment-actions-fixed {
+    display: flex;
+    gap: 12px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.12);
+    border: 1px solid rgba(14,165,233,0.06);
+    align-items: center;
+}
+
+/* Individual payment buttons style */
+body.page-pos .payment-actions-fixed .btn-pay {
+    min-width: 140px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+body.page-pos .payment-actions-fixed .btn-pay i {
+    margin-right: 6px;
+}
+
+body.page-pos .payment-actions-fixed .btn-pay.btn-pay-primary {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(37,99,235,0.15);
+}
+
+body.page-pos .payment-actions-fixed .btn-pay.btn-pay-success {
+    background: #10b981;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(16,185,129,0.12);
+}
+
+body.page-pos .payment-actions-fixed .btn-pay.btn-pay-secondary {
+    background: #f3f4f6;
+    color: #374151;
+    box-shadow: none;
+}
+
+body.page-pos .payment-actions-fixed .btn-pay.btn-pay-danger {
+    background: #ef4444;
+    color: #fff;
+}
+
+/* If the UI previously sets payment bar to full width, ensure it doesn't stretch over entire viewport */
+body.page-pos .payment-bar-fixed.fullwidth {
+    left: auto;
+    right: 32px;
+    width: auto;
+    max-width: 920px;
+}
+
+/* Mobile adjustments: collapse sidebar into top drawer */
+@media (max-width: 768px) {
+    body.page-pos .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        width: 220px !important;
+    }
+    body.page-pos .sidebar.open {
+        transform: translateX(0);
+        z-index: 1200;
+    }
+    body.page-pos .main-content {
+        margin-left: 0 !important;
+    }
+    body.page-pos .payment-bar-fixed,
+    body.page-pos .btn-pay {
+        right: 14px !important;
+        bottom: 14px !important;
+    }
+}
+@media (max-width: 768px) {
+    body.page-pos .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        width: 220px !important;
+    }
+    body.page-pos .sidebar.open {
+        transform: translateX(0);
+        z-index: 1200;
+    }
+    body.page-pos .main-content {
+        margin-left: 0 !important;
+    }
+    body.page-pos .payment-bar-fixed,
+    body.page-pos .btn-pay {
+        right: 14px !important;
+        bottom: 14px !important;
+    }
+}
+
+/* Accessibility: ensure visible focus states */
+body.page-pos .sidebar-menu a:focus {
+    outline: 3px solid rgba(37,99,235,0.12);
+    outline-offset: 2px;
+}
