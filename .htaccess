@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /shop_v2/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+<FilesMatch "\.(env|sql|md|txt)$">
+    Deny from all
+</FilesMatch>
+
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
